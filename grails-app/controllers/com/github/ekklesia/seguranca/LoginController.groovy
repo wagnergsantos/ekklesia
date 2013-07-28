@@ -1,3 +1,4 @@
+package com.github.ekklesia.seguranca
 import grails.converters.JSON
 
 import javax.servlet.http.HttpServletResponse
