@@ -39,17 +39,17 @@
 
                 <ul class="nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Secretaria <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><g:message code="menu.secretariat"/> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="controller">
                                 <g:link controller="igreja">
-                                    Igreja
+                                    <g:message code="menu.secretariat.church"/>
                                 </g:link>
                                 <g:link controller="participante">
-                                    Participante
+                                    <g:message code="menu.secretariat.member"/>
                                 </g:link>
                                 <g:link controller="celula">
-                                    Célula
+                                    <g:message code="menu.secretariat.cell"/>
                                 </g:link>
                             </li>
                         </ul>
@@ -58,17 +58,17 @@
 
                 <ul class="nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administração <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><g:message code="menu.admin"/> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="controller">
                                 <g:link controller="cargo">
-                                    Cargo
+                                    <g:message code="menu.admin.responsibility"/> 
                                 </g:link>
                                 <g:link controller="funcaoMinisterial">
-                                    Função Ministerial
+                                    <g:message code="menu.admin.function"/> 
                                 </g:link>
                                 <g:link controller="redeMinisterial">
-                                    Rede Ministerial
+                                    <g:message code="menu.admin.networking"/> 
                                 </g:link>
                             </li>
                         </ul>

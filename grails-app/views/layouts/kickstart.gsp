@@ -19,9 +19,12 @@
 	<%-- Manual switch for the skin can be found in /view/_menu/_config.gsp --%>
 	<r:require modules="jquery"/>
 	<r:require modules="bootstrap"/>
-	<r:require modules="bootstrap_utils"/>
+	<r:require modules="bootstrap_utils"/>	
 
 	<r:layoutResources />
+	
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+	
 	<g:layoutHead />
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -46,12 +49,12 @@
 	<g:render template="/layouts/content"/>														
 
 	<!-- Enable to overwrite Footer by individual page -->
-	<g:if test="${ pageProperty(name:'page.footer') }">
+	<%--<g:if test="${ pageProperty(name:'page.footer') }">
 	    <g:pageProperty name="page.footer" />
 	</g:if>
 	<g:else>
 		<g:render template="/layouts/footer"/>														
-	</g:else>
+	</g:else> --%>
 
 	<!-- Enable to insert additional components (e.g., modals, javascript, etc.) by any individual page -->
 	<g:if test="${ pageProperty(name:'page.include.bottom') }">
