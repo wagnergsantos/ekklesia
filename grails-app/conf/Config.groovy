@@ -95,3 +95,6 @@ grails.config.defaults.locations = [KickstartResources]
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.github.ekklesia.seguranca.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.github.ekklesia.seguranca.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.github.ekklesia.seguranca.Role'
+grails.plugins.springsecurity.rememberMe.persistent = true
+grails.plugins.springsecurity.rememberMe.persistentToken.domainClassName = 'com.github.ekklesia.seguranca.PersistentLogin'
+grails.plugins.springsecurity.password.algorithm='SHA-512'
