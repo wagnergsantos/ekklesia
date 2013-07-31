@@ -37,43 +37,19 @@
                     </li>
                 </ul> --%>
 
-                <ul class="nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><g:message code="menu.secretariat"/> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="controller">
-                                <g:link controller="igreja">
-                                    <g:message code="menu.secretariat.church"/>
-                                </g:link>
-                                <g:link controller="participante">
-                                    <g:message code="menu.secretariat.member"/>
-                                </g:link>
-                                <g:link controller="celula">
-                                    <g:message code="menu.secretariat.cell"/>
-                                </g:link>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <ul class="nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><g:message code="menu.admin"/> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="controller">
-                                <g:link controller="cargo">
-                                    <g:message code="menu.admin.responsibility"/> 
-                                </g:link>
-                                <g:link controller="funcaoMinisterial">
-                                    <g:message code="menu.admin.function"/> 
-                                </g:link>
-                                <g:link controller="redeMinisterial">
-                                    <g:message code="menu.admin.networking"/> 
-                                </g:link>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                
+                <ekklesia:menu description="${g.message(code:'menu.secretariat')}">
+                	<ekklesia:menuitem controller="igreja" description="${g.message(code:'menu.secretariat.church')}" />
+                    <ekklesia:menuitem controller="participante" description="${g.message(code:'menu.secretariat.member')}" />
+                    <ekklesia:menuitem controller="celula" description="${g.message(code:'menu.secretariat.cell')}" />
+                </ekklesia:menu>
+                
+                <ekklesia:menu description="${g.message(code:'menu.admin')}">
+                	<ekklesia:menuitem controller="cargo" description="${g.message(code:'menu.admin.responsibility')}" />
+                    <ekklesia:menuitem controller="funcaoMinisterial" description="${g.message(code:'menu.admin.function')}" />
+                    <ekklesia:menuitem controller="redeMinisterial" description="${g.message(code:'menu.admin.networking')}" />
+                </ekklesia:menu>
+                
 
                 <div class="pull-left">
                         <%--Left-side entries--%>
