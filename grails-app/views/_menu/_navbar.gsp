@@ -39,15 +39,15 @@
 
                 
                 <ekklesia:menu description="${g.message(code:'menu.secretariat')}">
-                	<ekklesia:menuitem controller="igreja" description="${g.message(code:'menu.secretariat.church')}" />
-                    <ekklesia:menuitem controller="participante" description="${g.message(code:'menu.secretariat.member')}" />
-                    <ekklesia:menuitem controller="celula" description="${g.message(code:'menu.secretariat.cell')}" />
+                	<ekklesia:menuitem controller="igreja" description="${g.message(code:'igreja.label')}" />
+                    <ekklesia:menuitem controller="participante" description="${g.message(code:'participante.label')}" />
+                    <ekklesia:menuitem controller="celula" description="${g.message(code:'celula.label')}" />
                 </ekklesia:menu>
                 
                 <ekklesia:menu description="${g.message(code:'menu.admin')}">
-                	<ekklesia:menuitem controller="cargo" description="${g.message(code:'menu.admin.responsibility')}" />
-                    <ekklesia:menuitem controller="funcaoMinisterial" description="${g.message(code:'menu.admin.function')}" />
-                    <ekklesia:menuitem controller="redeMinisterial" description="${g.message(code:'menu.admin.networking')}" />
+                	<ekklesia:menuitem controller="cargo" description="${g.message(code:'cargo.label')}" />
+                    <ekklesia:menuitem controller="funcaoMinisterial" description="${g.message(code:'funcaoMinisterial.label')}" />
+                    <ekklesia:menuitem controller="redeMinisterial" description="${g.message(code:'redeMinisterial.label')}" />
                 </ekklesia:menu>
                 
 
