@@ -9,7 +9,7 @@
 
 	<section id="intro">
 		<p class="lead">
-			For ongoing information about ${meta(name:'app.name')}, please read our company 
+			For ongoing information about ${meta(name:'app.name').capitalize()}, please read our company 
 			<a href="http://wordpress.com/signup/">blog</a>. Also, feel free to
 			contact us with service questions, partnership proposals, or media
 			inquiries.
@@ -21,7 +21,7 @@
 		<div class="span4">
 			<h1><g:message code="default.contact.address"/></h1>
 				<address>
-					<strong>${meta(name:'app.name')}, Inc.</strong><br>
+					<strong>${meta(name:'app.name').capitalize()}, Inc.</strong><br>
 					 123 Future Ave<br>
 					 San Francisco, CA 94107<br>
 					 <br>
@@ -50,7 +50,7 @@
 							<strong>Email</strong>
 						</span>
 						<span class="span3">
-					    	<a href="mailto:info@${meta(name:'app.name')}.com">info@${meta(name:'app.name')}.com</a>
+					    	<a href="mailto:info@${meta(name:'app.name').capitalize()}.com">info@${meta(name:'app.name').capitalize()}.com</a>
 						</span>
 					</div>
 				</address>

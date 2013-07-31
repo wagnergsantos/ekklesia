@@ -11,8 +11,8 @@
 		<header id="Header" class="jumbotron masthead">
 			<div class="inner">
 				<div class="container">
-					<h1 class="title">Technical Info about ${meta(name:'app.name')}</h1>
-					<p class="lead">This page presents some information about the ${meta(name:'app.name')} system.</p>
+					<h1 class="title">Technical Info about ${meta(name:'app.name').capitalize()}</h1>
+					<p class="lead">This page presents some information about the ${meta(name:'app.name').capitalize()} system.</p>
 				</div>
 			</div>
 		</header>

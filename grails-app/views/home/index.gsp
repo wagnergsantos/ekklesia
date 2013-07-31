@@ -1,14 +1,14 @@
 <html>
 
 <head>
-	<title><g:message code="default.welcome.title" args="[meta(name:'app.name')]"/> </title>
+	<title><g:message code="default.welcome.title" args="[meta(name:'app.name').capitalize()]"/> </title>
 	<meta name="layout" content="kickstart" />
 </head>
 
 <body>
 
 	<section id="intro" class="first">
-		<h1><g:message code="default.welcome.title" args="[meta(name:'app.name')]"/></h1>
+		<h1><g:message code="default.welcome.title" args="[meta(name:'app.name').capitalize()]"/></h1>
 		<p>
 			Obrigado por utilizar o Ekklesia, para acessar o sistema efetue o login.
 		</p>

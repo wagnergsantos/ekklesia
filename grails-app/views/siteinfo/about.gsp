@@ -1,16 +1,16 @@
 <html>
 
 <head>
-	<title><g:message code="default.about.title" args="[meta(name:'app.name')]"/></title>
+	<title><g:message code="default.about.title" args="[meta(name:'app.name').capitalize()]"/></title>
 	<meta name="layout" content="kickstart" />
 </head>
 
 <body>
 
 	<section id="intro">
-		<h1><g:message code="default.welcome.title" args="[meta(name:'app.name')]"/></h1>
+		<h1><g:message code="default.welcome.title" args="[meta(name:'app.name').capitalize()]"/></h1>
 		<p class="lead">
-			${meta(name:'app.name')}
+			${meta(name:'app.name').capitalize()}
 			is the hottest System since sliced bread!
 		</p>
 	</section>
