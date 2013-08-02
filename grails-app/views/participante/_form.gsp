@@ -45,24 +45,42 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: participanteInstance, field: 'dataNascimento', 'error')} required">
 				<label for="dataNascimento" class="control-label"><g:message code="participante.dataNascimento.label" default="Data Nascimento" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<bs:datePicker name="dataNascimento" precision="day"  value="${participanteInstance?.dataNascimento}"  />
-					<span class="help-inline">${hasErrors(bean: participanteInstance, field: 'dataNascimento', 'error')}</span>
+					<div class="input-append date">
+						<g:textField name="dataNascimento" id="dataNascimento" required="" value="${participanteInstance?.dataNascimento}" class="input-small" data-date-format="dd/MM/yyyy"/>
+						<span class="add-on"><i class="icon-calendar"></i></span>
+						<span class="help-inline">${hasErrors(bean: celulaInstance, field: 'dataNascimento', 'error')}</span>
+						<script type="text/javascript">
+							$('#dataNascimento').datepicker();
+						</script>
+					</div>
 				</div>
 			</div>
 
 			<div class="control-group fieldcontain ${hasErrors(bean: participanteInstance, field: 'dataConversao', 'error')} required">
 				<label for="dataConversao" class="control-label"><g:message code="participante.dataConversao.label" default="Data Conversao" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<bs:datePicker name="dataConversao" precision="day"  value="${participanteInstance?.dataConversao}"  />
-					<span class="help-inline">${hasErrors(bean: participanteInstance, field: 'dataConversao', 'error')}</span>
+					<div class="input-append date">
+						<g:textField name="dataConversao" id="dataConversao" required="" value="${participanteInstance?.dataConversao}" class="input-small" data-date-format="dd/MM/yyyy"/>
+						<span class="add-on"><i class="icon-calendar"></i></span>
+						<span class="help-inline">${hasErrors(bean: participanteInstance, field: 'dataConversao', 'error')}</span>
+						<script type="text/javascript">
+							$('#dataConversao').datepicker();
+						</script>
+					</div>
 				</div>
 			</div>
 
 			<div class="control-group fieldcontain ${hasErrors(bean: participanteInstance, field: 'dataBatismo', 'error')} required">
 				<label for="dataBatismo" class="control-label"><g:message code="participante.dataBatismo.label" default="Data Batismo" /><span class="required-indicator">*</span></label>
-				<div class="controls">
-					<bs:datePicker name="dataBatismo" precision="day"  value="${participanteInstance?.dataBatismo}"  />
-					<span class="help-inline">${hasErrors(bean: participanteInstance, field: 'dataBatismo', 'error')}</span>
+				<div class="controls">					
+					<div class="input-append date">
+						<g:textField name="dataBatismo" id="dataBatismo" required="" value="${participanteInstance?.dataBatismo}" class="input-small" data-date-format="dd/MM/yyyy"/>
+						<span class="add-on"><i class="icon-calendar"></i></span>
+						<span class="help-inline">${hasErrors(bean: participanteInstance, field: 'dataBatismo', 'error')}</span>
+						<script type="text/javascript">
+							$('#dataBatismo').datepicker();
+						</script>
+					</div>
 				</div>
 			</div>
 

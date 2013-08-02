@@ -20,10 +20,14 @@
 	<r:require modules="jquery"/>
 	<r:require modules="bootstrap"/>
 	<r:require modules="bootstrap_utils"/>	
+	
 
 	<r:layoutResources />
 	
+	<g:javascript src="bootstrap-timepicker.min.js" />
+	
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-timepicker.min.css')}" type="text/css">
 	
 	<g:layoutHead />
 

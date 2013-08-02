@@ -21,16 +21,27 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: celulaInstance, field: 'dataCriacao', 'error')} required">
 				<label for="dataCriacao" class="control-label"><g:message code="celula.dataCriacao.label" default="Data Criacao" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<bs:datePicker name="dataCriacao" precision="day"  value="${celulaInstance?.dataCriacao}"  />
-					<span class="help-inline">${hasErrors(bean: celulaInstance, field: 'dataCriacao', 'error')}</span>
+					<div class="input-append date">
+						<g:textField name="dataCriacao" required="" value="${celulaInstance?.dataCriacao}" class="input-small" id="datepicker1" data-date-format="dd/MM/yyyy"/>
+						<span class="add-on"><i class="icon-calendar"></i></span>
+						<span class="help-inline">${hasErrors(bean: celulaInstance, field: 'dataCriacao', 'error')}</span>
+						<script type="text/javascript">
+							$('#datepicker1').datepicker();
+						</script>
+					</div>
 				</div>
 			</div>
 
 			<div class="control-group fieldcontain ${hasErrors(bean: celulaInstance, field: 'horario', 'error')} required">
 				<label for="horario" class="control-label"><g:message code="celula.horario.label" default="Horario" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<bs:datePicker name="horario" precision="day"  value="${celulaInstance?.horario}"  />
-					<span class="help-inline">${hasErrors(bean: celulaInstance, field: 'horario', 'error')}</span>
+					<div class="input-append bootstrap-timepicker">
+						<g:textField name="horario" required="" value="${celulaInstance?.horario}" class="input-small" id="timepicker1"/>
+						<span class="add-on"><i class="icon-time"></i></span>
+						<script type="text/javascript">
+							$('#timepicker1').timepicker({showMeridian: false, defaultTime: false});
+						</script>
+					</div>
 				</div>
 			</div>
 

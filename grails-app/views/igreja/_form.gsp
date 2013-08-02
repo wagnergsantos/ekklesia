@@ -37,8 +37,14 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: igrejaInstance, field: 'dataFundacao', 'error')} required">
 				<label for="dataFundacao" class="control-label"><g:message code="igreja.dataFundacao.label" default="Data Fundacao" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<bs:datePicker name="dataFundacao" precision="day"  value="${igrejaInstance?.dataFundacao}"  />
-					<span class="help-inline">${hasErrors(bean: igrejaInstance, field: 'dataFundacao', 'error')}</span>
+					<div class="input-append date">
+						<g:textField name="dataFundacao" required="" value="${igrejaInstance?.dataFundacao}" class="input-small" id="dataFundacao" data-date-format="dd/MM/yyyy"/>
+						<span class="add-on"><i class="icon-calendar"></i></span>
+						<span class="help-inline">${hasErrors(bean: igrejaInstance, field: 'dataFundacao', 'error')}</span>
+						<script type="text/javascript">
+							$('#dataFundacao').datepicker();
+						</script>
+					</div>
 				</div>
 			</div>
 
