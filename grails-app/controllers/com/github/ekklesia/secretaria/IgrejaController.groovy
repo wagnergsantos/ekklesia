@@ -1,6 +1,9 @@
 package com.github.ekklesia.secretaria
 
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.web.multipart.MultipartFile
+
+import com.github.ekklesia.util.UploadFile;
 
 /**
  * IgrejaController
@@ -9,6 +12,8 @@ import org.springframework.dao.DataIntegrityViolationException
 class IgrejaController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+	
+	def fileUploadService
 
     def index() {
         redirect(action: "list", params: params)
@@ -25,6 +30,12 @@ class IgrejaController {
 
     def save() {
         def igrejaInstance = new Igreja(params)
+		
+		def file = request.getFile("logoInput")
+		UploadFile logo = fileUploadService.saveFile(file,"logo")
+		
+		igrejaInstance.logo = logo
+		
         if (!igrejaInstance.save(flush: true)) {
             render(view: "create", model: [igrejaInstance: igrejaInstance])
             return

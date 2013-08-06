@@ -5,7 +5,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: igrejaInstance, field: 'logo', 'error')} required">
 				<label for="logo" class="control-label"><g:message code="igreja.logo.label" default="Logo" /><span class="required-indicator">*</span></label>
 				<div class="controls">
-					<input type="file" id="logo" name="logo" />
+					<input type="file" id="logo" name="logoInput" />
 					<span class="help-inline">${hasErrors(bean: igrejaInstance, field: 'logo', 'error')}</span>
 				</div>
 			</div>

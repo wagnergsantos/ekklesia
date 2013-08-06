@@ -19,6 +19,9 @@
 		
 			<tr class="prop">
 				<td valign="top" class="name"><g:message code="igreja.logo.label" default="Logo" /></td>
+				<td valign="top" class="value">
+					<img src="${createLink(controller:'uploadFile', action:'show', id:igrejaInstance.logo.id)}" />
+				</td>
 				
 			</tr>
 		

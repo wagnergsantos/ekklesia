@@ -1,5 +1,7 @@
 package com.github.ekklesia.secretaria
 
+import com.github.ekklesia.util.UploadFile;
+
 class Igreja {
 
 	String nome
@@ -14,13 +16,13 @@ class Igreja {
 	String telefone
 	String cnpj
 	String site
-	byte[] logo
+	UploadFile logo
 
 	static hasMany = [filiais:Igreja, participantes:Participante]
 	static belongsTo = [matriz:Igreja,lider:Participante]
 
 	static constraints = {
-		logo(maxSize:50000)
+		logo()
 		nome(blank:false)
 		nomeFantasia(blank:false)
 		cnpj()
