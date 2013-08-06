@@ -78,7 +78,7 @@ log4j = {
     //}
 	
 	debug 'org.hibernate.SQL'
-	trace 'org.hibernate.type'
+	trace 'org.hibernate.type.descriptor.sql.BasicBinder'
 	debug 'groovy.sql.Sql'
     
 	error  'org.codehaus.groovy.grails.web.servlet',        // controllers
@@ -102,3 +102,16 @@ grails.plugins.springsecurity.authority.className = 'com.github.ekklesia.seguran
 grails.plugins.springsecurity.rememberMe.persistent = true
 grails.plugins.springsecurity.rememberMe.persistentToken.domainClassName = 'com.github.ekklesia.seguranca.PersistentLogin'
 grails.plugins.springsecurity.password.algorithm='SHA-512'
+
+fileuploader {
+	logo {
+		maxSize = 1024 * 256 //256 kbytes
+		allowedExtensions = ["jpg","jpeg","gif","png"]
+		path = "/tmp/avatar/"
+	}
+	docs {
+		maxSize = 1000 * 1024 * 4 //4 mbytes
+		allowedExtensions = ["doc", "docx", "pdf", "rtf"]
+		path = "/tmp/docs/"
+	}
+}
