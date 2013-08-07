@@ -13,23 +13,21 @@ class UploadFile {
 	String name
 	String originalName
 	String mimeType
-	Date dateUploaded
-	Integer downloads
+	Date dateCreated
 
 	static constraints = {
 		size(min:0L)
-		path()
-		name()
-		originalName()
-		mimeType()
-		dateUploaded()
-		downloads()
+		path(blank:false)
+		name(blank:false)
+		originalName(blank:false)
+		mimeType(blank:false)
 	}
+
 
 	def afterDelete() {
 		try {
 			File f = new File(path)
-			
+
 			if (f.delete()) {
 				log.debug "file [${path}] deleted"
 			} else {

@@ -1,8 +1,9 @@
 package com.github.ekklesia.secretaria
 
+import com.github.ekklesia.interfaces.Uploadable;
 import com.github.ekklesia.util.UploadFile;
 
-class Igreja {
+class Igreja implements Uploadable {
 
 	String nome
 	String nomeFantasia
@@ -43,5 +44,22 @@ class Igreja {
 
 	String toString(){
 		return "${nome} - ${matriz}"
+	}
+	
+	@Override
+	public String group() {
+		return "igreja";
+	}
+	@Override
+	public String path() {
+		return System.getProperty("java.io.tmpdir");
+	}
+	@Override
+	public Long maxSize() {
+		return 1024 * 1024 //1 mbytes;
+	}
+	@Override
+	public String[] allowedExtensions() {
+		return ["jpg","jpeg","gif","png"];
 	}
 }

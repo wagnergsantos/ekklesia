@@ -3,6 +3,7 @@ package com.github.ekklesia.secretaria
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.web.multipart.MultipartFile
 
+import com.github.ekklesia.interfaces.Uploadable;
 import com.github.ekklesia.util.UploadFile;
 
 /**
@@ -32,7 +33,8 @@ class IgrejaController {
         def igrejaInstance = new Igreja(params)
 		
 		def file = request.getFile("logoInput")
-		UploadFile logo = fileUploadService.saveFile(file,"logo")
+		println  igrejaInstance instanceof Uploadable
+		UploadFile logo = fileUploadService.saveFile(file,igrejaInstance)
 		
 		igrejaInstance.logo = logo
 		
